@@ -10,7 +10,7 @@ import { useGetMyUser } from "../api/MyUserApi"
 type Props = {
     onCheckout: (userFormData: UserFormData) => void;
     disabled: boolean,
-    isLoading: ConstrainBooleanParameters
+    isLoading: boolean
 }
 const CheckOutButton = ({ onCheckout, disabled, isLoading }: Props) => {
     const { isAuthenticated, isLoading: isAuthLoading, loginWithRedirect } = useAuth0()
