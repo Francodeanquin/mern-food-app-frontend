@@ -1,6 +1,7 @@
 import { useAuth0 } from "@auth0/auth0-react"
-import { useMutation } from "react-query"
+import { useMutation, useQuery } from "react-query"
 import { toast } from "sonner"
+import { Order } from "../types";
 
 
 const API_BASE_URL = import.meta.env.VITE_API_BASE_URL;
