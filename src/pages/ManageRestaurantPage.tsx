@@ -1,10 +1,10 @@
-import { useGetMyRestaurant, useGetMyRestaurantOrders, userCreateMyRestaurant, useUpdateMyRestaurant } from '../api/MyRestaurantApi'
+import { useCreateMyRestaurant, useGetMyRestaurant, useGetMyRestaurantOrders, userCreateMyRestaurant, useUpdateMyRestaurant } from '../api/MyRestaurantApi'
 import OrderItemCard from '../components/OrderItemCard'
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '../components/ui/tabs'
 import ManageRestaurantForm from '../forms/manage-restaurant-form/ManageRestaurantForm'
 
 const ManageRestaurantPage = () => {
-    const { createRestaurant, isLoading: isCreateLoading } = userCreateMyRestaurant()
+    const { createRestaurant, isLoading: isCreateLoading } = useCreateMyRestaurant()
     const { restaurant } = useGetMyRestaurant()
     const { updateRestaurant, isLoading: isUpdateLoading } = useUpdateMyRestaurant()
 
