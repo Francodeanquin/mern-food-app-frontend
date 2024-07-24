@@ -32,7 +32,7 @@ export type OrderStatus =
     | "paid"
     | "inProgress"
     | "outForDelivery"
-    | "delivered";
+    | "delivered";   //Can only be One of these strings
 
 export type Order = {
     _id: string;
